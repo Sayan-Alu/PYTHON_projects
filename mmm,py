@@ -1,0 +1,18 @@
+try:
+    # code that may raise an exception
+    file = open("example.txt", "r")
+    data = file.read()
+except FileNotFoundError:
+    # code to handle the exception
+    print("File not found, please check the file path and try again.")
+except:
+    # code to handle any other exceptions that may occur
+    print("An error occurred while reading the file.")
+else:
+    # code to run if the try block is successful
+    print("File successfully read.")
+    file.close()
+finally:
+    # code to run regardless of whether an exception was raised
+    print("End of file reading operation.")
+
